@@ -6,7 +6,10 @@ import java.text.*;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        final File file  = new File("data.txt");
+        
+
         NumberFormat fmt = NumberFormat.getNumberInstance();
         fmt.setMinimumFractionDigits(2);
         fmt.setMaximumFractionDigits(2);
@@ -21,7 +24,7 @@ public class Main {
             if (!name.equalsIgnoreCase("EXIT")) {
                 System.out.print("Please enter the amount of the deposit. ");
                 double amount = kbReader.nextDouble();
-                System.out.println(" "); // gives an eye pleasing blank line
+                System.out.println(" ");
                 // between accounts
                 bankAccount theAccount = new bankAccount(name, amount);
                 iter.add(theAccount);
