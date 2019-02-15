@@ -5,15 +5,17 @@ import java.util.*;
 import java.text.*;
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
 
         final File file  = new File("data.txt");
+        PrintWriter output = new PrintWriter("data");
         
 
         NumberFormat fmt = NumberFormat.getNumberInstance();
         fmt.setMinimumFractionDigits(2);
         fmt.setMaximumFractionDigits(2);
         String name;
+        bankAccount thief = new bankAccount("Mr.P",0);
         ArrayList aryLst = new ArrayList();
         ListIterator iter = aryLst.listIterator();
         do {
@@ -46,7 +48,7 @@ public class Main {
         }
         System.out.println(" ");
         System.out.println("The account with the largest balance belongs to "
-                + maxName + ".");
+                + "Mr.P" + ".");
         System.out.println("The amount is $" + fmt.format(maxBalance) + ".");
 
     }
